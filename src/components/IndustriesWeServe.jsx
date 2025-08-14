@@ -11,7 +11,7 @@ export default function IndustriesWeServe() {
           </div>
   
           {/* Heading */}
-          <h2 className="text-3xl md:text-5xl font-bold leading-tight mb-4">
+          <h2 className="text-3xl md:text-5xl font-bold leading-tight text-black mb-4">
             We Designed & Developed Websites For
           </h2>
   

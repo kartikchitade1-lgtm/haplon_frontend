@@ -24,7 +24,7 @@ export default function OurServices() {
     ];
   
     return (
-      <section className="bg-gradient-to-b from-gray-900 to-gray-800 text-white py-16 px-4">
+      <section className="bg-gradient-to-b from-black to-gray-100 text-white py-16 px-4">
         <div className="max-w-7xl mx-auto text-center">
           {/* Tag */}
           <span className="inline-block px-6 py-1 border border-dashed border-yellow-400 text-yellow-400 text-sm rounded-full mb-6">
