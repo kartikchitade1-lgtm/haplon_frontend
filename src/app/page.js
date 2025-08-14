@@ -108,11 +108,12 @@ export default function Home() {
           Go to nextjs.org →
         </a>
       </footer> */}
+
       <SocialMediaHero/>
       <ClientsSection />
       <SocialMedia/>
-      <PartnershipSection />
       <Technologies />
+      <PartnershipSection />
       <ReachEngageSell />
       <OurServices />
       <IndustriesWeServe />

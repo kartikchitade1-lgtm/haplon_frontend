@@ -1,53 +1,77 @@
-// components/OurServices.tsx
+"use client";
+
+import Slider from "react-slick";
+
 export default function OurServices() {
-    const services = [
+  const services = [
+    {
+      title: "Social Media Marketing",
+      description:
+        "At Enum Digital, we confidently deliver the stunning website design & development service in a very discounted price. Our Best and Affordable Web Design",
+    },
+    {
+      title: "UX/UI Design",
+      description:
+        "At Enum Digital, we confidently deliver the stunning website design & development service in a very discounted price. Our Best and Affordable Web Design",
+    },
+    {
+      title: "Mobile App Development",
+      description:
+        "At Enum Digital, we confidently deliver the stunning website design & development service in a very discounted price. Our Best and Affordable Web Design",
+    },
+    {
+      title: "Digital Marketing Strategy",
+      description:
+        "At Enum Digital, we confidently deliver the stunning website design & development service in a very discounted price. Our Best and Affordable Web Design",
+    },
+  ];
+
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 4,
+    slidesToScroll: 1,
+    arrows: true,
+    responsive: [
       {
-        title: "Social Media Marketing",
-        description:
-          "At Enum Digital, we confidently deliver the stunning website design & development service in a very discounted price. Our Best and Affordable Web Design",
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 2,
+        },
       },
       {
-        title: "UX/UI Design",
-        description:
-          "At Enum Digital, we confidently deliver the stunning website design & development service in a very discounted price. Our Best and Affordable Web Design",
+        breakpoint: 640,
+        settings: {
+          slidesToShow: 1,
+        },
       },
-      {
-        title: "Mobile App Development",
-        description:
-          "At Enum Digital, we confidently deliver the stunning website design & development service in a very discounted price. Our Best and Affordable Web Design",
-      },
-      {
-        title: "Digital Marketing Strategy",
-        description:
-          "At Enum Digital, we confidently deliver the stunning website design & development service in a very discounted price. Our Best and Affordable Web Design",
-      },
-    ];
-  
-    return (
-      <section className="bg-gradient-to-b from-black to-gray-100 text-white py-16 px-4">
-        <div className="max-w-7xl mx-auto text-center">
-          {/* Tag */}
-          <span className="inline-block px-6 py-1 border border-dashed border-yellow-400 text-yellow-400 text-sm rounded-full mb-6">
-            Other services
-          </span>
-  
-          {/* Heading */}
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4">
-            Your Dream Website, <br className="hidden sm:block" /> Made Reality
-          </h2>
-          <p className="text-gray-300 max-w-2xl mx-auto mb-12">
-            We provide bespoke solutions that bridge the gap between commercial
-            possibilities and creative resolution, while delivering effectiveness
-            for our clients.
-          </p>
-  
-          {/* Services Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
-            {services.map((service, idx) => (
-              <div
-                key={idx}
-                className="bg-white text-black rounded-2xl shadow p-6 flex flex-col items-start text-left"
-              >
+    ],
+  };
+
+  return (
+    <section className="bg-gradient-to-b from-black to-gray-100 text-white py-16 px-4">
+      <div className="max-w-7xl mx-auto text-center">
+        {/* Tag */}
+        <span className="inline-block px-6 py-1 border border-dashed border-[#D8FF36] border-dotted text-[#D8FF36] text-sm rounded-full mb-6">
+          Other services
+        </span>
+
+        {/* Heading */}
+        <h2 className="text-3xl sm:text-4xl md:text-7xl font-bold mb-4">
+          Your Dream Website, <br className="hidden sm:block" /> Made Reality
+        </h2>
+        <p className="text-gray-300 max-w-2xl text-xl mx-auto mb-12">
+          We provide bespoke solutions that bridge the gap between commercial
+          possibilities and creative resolution, while delivering effectiveness
+          for our clients.
+        </p>
+
+        {/* Services Carousel */}
+        <Slider {...settings}>
+          {services.map((service, idx) => (
+            <div key={idx} className="px-2">
+              <div className="bg-white text-black rounded-2xl shadow p-6 flex flex-col items-start text-left mx-2">
                 {/* Icon Placeholder */}
                 <div className="mb-4">
                   <div className="w-10 h-10 bg-gray-200 rounded flex items-center justify-center">
@@ -57,20 +81,20 @@ export default function OurServices() {
                 <h3 className="font-bold text-lg mb-2">{service.title}</h3>
                 <p className="text-sm text-gray-700">{service.description}</p>
               </div>
-            ))}
-          </div>
-  
-          {/* Buttons */}
-          <div className="flex flex-wrap justify-center gap-4">
-            <button className="px-6 py-3 bg-black text-white rounded-full hover:bg-gray-800 transition">
-              Talk To Our Expert
-            </button>
-            <button className="px-6 py-3 bg-white text-black border border-gray-300 rounded-full hover:bg-gray-100 transition">
-              Get a Quote
-            </button>
-          </div>
+            </div>
+          ))}
+        </Slider>
+
+        {/* Buttons */}
+        <div className="mt-8 flex flex-wrap justify-center gap-4">
+          <button className="px-6 py-3 bg-black text-white border border-[#D8FF36] rounded-full text-sm sm:text-base font-medium hover:opacity-90 transition">
+            Talk To Our Expert
+          </button>
+          <button className="px-6 py-3 border border-[#D8FF36] text-sm sm:text-base font-medium bg-white rounded-full text-black hover:bg-lime-50 transition">
+            Get a Quote
+          </button>
         </div>
-      </section>
-    );
-  }
-  
+      </div>
+    </section>
+  );
+}

@@ -55,9 +55,68 @@ body {
 }
 
 .animate-scrollLeft {
-  animation: scrollLeft 15s linear infinite;
+  animation: scrollLeft 5s linear infinite;
 }
 
 .animate-scrollRight {
-  animation: scrollRight 15s linear infinite;
+  animation: scrollRight 5s linear infinite;
+}
+.hero {
+  height: 100vh; /* fallback */
+  height: 100dvh;
+}
+/* Make dots larger and style active dot */
+/* React Slick Dots Styling */
+/* Force slick dots to be visible */
+.slick-dots {
+  margin-top: 2.5rem; /* mt-10 */
+  position: static !important; /* Prevent them from being positioned off-screen */
+  display: flex !important;
+  justify-content: center;
+}
+
+.slick-dots li {
+  margin: 8px;
+}
+
+.slick-dots li button {
+  padding: 0;
+}
+
+.slick-dots li button:before {
+  font-family: 'slick'; /* important to keep slick icon font */
+  font-size: 12px !important;
+  line-height: 1;
+  color: #ffffff !important; /* visible on black background */
+  opacity: 1 !important;
+}
+
+.slick-dots li.slick-active button:before {
+  color: #D9FF3D !important; /* amber-500 */
+  font-size: 14px !important;
+}
+@keyframes scroll-up {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes scroll-down {
+  0% {
+    transform: translateY(-50%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.animate-up {
+  animation: scroll-up 50s linear infinite;
+}
+
+.animate-down {
+  animation: scroll-down 50s linear infinite;
 }

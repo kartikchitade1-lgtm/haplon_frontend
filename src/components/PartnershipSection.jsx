@@ -3,23 +3,23 @@ import Image from "next/image";
 
 export default function PartnershipSection() {
   return (
-    <section className="bg-[#c4ff47] py-12 px-4 md:px-8 lg:px-16">
+    <section className="bg-[#D8FF36] py-12 px-4 md:px-8 lg:px-16">
       <div className="max-w-7xl mx-auto">
         {/* Tag */}
         <div className="flex justify-center mb-6">
-          <span className="bg-white text-gray-700 px-4 py-1 rounded-full text-sm font-medium shadow">
+          <span className="bg-white text-gray-700 px-8 py-4 rounded-full text-sm font-medium shadow">
             Trusted by Industry & Leaders Worldwide
           </span>
         </div>
 
         {/* Heading */}
-        <h2 className="text-2xl md:text-4xl font-bold text-center text-black mb-6">
+        <h2 className="text-2xl md:text-7xl font-bold text-center text-black mb-6">
           Grateful for the Partnership <br className="hidden sm:block" /> with
           Our Esteemed Client
         </h2>
 
         {/* Description */}
-        <p className="text-center text-gray-800 max-w-4xl mx-auto mb-10 text-sm md:text-base">
+        <p className="text-center text-gray-600 max-w-4xl mx-auto text-xl md:text-base">
           Enum Digital (Digits that Define Growth) - No matter we are building a
           website for our clients or boosting their business through our
           marketing strategies - We talk about facts like the website&apos;s
@@ -27,20 +27,24 @@ export default function PartnershipSection() {
           of leads, cost per lead, and more.
         </p>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 md:gap-10 items-stretch min-h-screen">
           {/* Left Image */}
-          <div className="flex items-center justify-center">
-            <div className="relative">
+          {/* Left Image */}
+          <div className="flex items-center justify-center h-full">
+            <div
+              className="relative w-full flex items-center justify-center"
+              style={{ height: "600px" }}
+            >
               <img
                 src="/hope_men_status.png"
                 alt="Social Media Illustration"
-                className="object-contain max-w-full h-dvh"
+                className="object-contain h-full w-auto"
               />
             </div>
           </div>
 
           {/* Right Content */}
-          <div className="flex flex-col justify-center">
+          <div className="flex flex-col justify-center h-full">
             <p className="text-gray-800 mb-6 text-sm md:text-base">
               Social Media Brand Management is a tricky business. Some campaign
               works well, others provide us with learnings to improve. With try
@@ -66,7 +70,7 @@ export default function PartnershipSection() {
                 "Develop your marketing persona",
               ].map((item, idx) => (
                 <li key={idx} className="flex items-start gap-2">
-                  <span className="text-green-600 font-bold">✔</span>
+                  <span className="text-black font-bold">✔</span>
                   <span className="text-black">{item}</span>
                 </li>
               ))}
@@ -75,15 +79,19 @@ export default function PartnershipSection() {
         </div>
 
         {/* Years Stats */}
-        <div className="flex flex-wrap justify-center gap-4 mt-12">
+        <div className="flex flex-wrap justify-center gap-4">
           {[...Array(5)].map((_, i) => (
             <div
               key={i}
-              className="bg-black text-white rounded-full w-28 h-28 flex flex-col justify-center items-center text-center p-4"
+              className="bg-black text-white rounded-full w-40 h-40 flex justify-center items-center p-2"
             >
-              <span className="text-2xl font-bold">13+</span>
-              <span className="text-sm">YEARS!</span>
-              <span className="text-xs mt-1">The Splendid Journey</span>
+              <div className="border border-[#D8FF36] rounded-full w-36 h-36 flex flex-col items-center justify-center text-center">
+                <span className="text-4xl font-bold text-[#D8FF36] leading-none">
+                  13+
+                </span>
+                <span className="text-sm font-bold leading-tight">YEARS!</span>
+                <span className="text-xs mt-1">The Splendid Journey</span>
+              </div>
             </div>
           ))}
         </div>
