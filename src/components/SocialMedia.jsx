@@ -38,7 +38,7 @@ export default function SocialMedia() {
             </div>
 
             {/* Title */}
-            <h3 className="text-lg font-semibold mb-2">{title}</h3>
+            <h3 className="text-lg font-semibold mb-2 text-black">{title}</h3>
 
             {/* Description */}
             <p className="text-sm text-gray-700">{description}</p>

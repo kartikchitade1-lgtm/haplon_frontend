@@ -34,7 +34,7 @@ export default function IndustriesWeServe() {
   
             {/* Right Section - 4 grouped column images */}
             <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
-              <img src="/industries 01.png" alt="Industries 0 1" className="object-contain w-full" />
+              <img src="/Industries 01.png" alt="Industries 0 1" className="object-contain w-full" />
               <img src="/industries 02.png" alt="Industries 0 2" className="object-contain w-full" />
               <img src="/industires 03.png" alt="Industries 0 3" className="object-contain w-full" />
               <img src="/industries 04.png" alt="Industries 0 4" className="object-contain w-full" />
