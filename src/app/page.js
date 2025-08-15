@@ -1,5 +1,6 @@
 import CaseStudyCard from "@/components/CaseStudyCard";
 import ClientsSection from "@/components/ClientsSection";
+import Footer from "@/components/Footer";
 import IndustriesWeServe from "@/components/IndustriesWeServe";
 import OurServices from "@/components/OurServices";
 import PartnershipSection from "@/components/PartnershipSection";
@@ -7,6 +8,7 @@ import ReachEngageSell from "@/components/ReachEngageSell";
 import SocialMedia from "@/components/SocialMedia";
 import SocialMediaHero from "@/components/SocialMediaHero";
 import Technologies from "@/components/Technologies";
+import TopEllipse from "@/components/TopEllipse";
 import WorldMapSection from "@/components/WorldMapSection";
 import Image from "next/image";
 
@@ -109,16 +111,68 @@ export default function Home() {
         </a>
       </footer> */}
 
-      <SocialMediaHero/>
-      <ClientsSection />
-      <SocialMedia/>
-      <Technologies />
-      <PartnershipSection />
-      <ReachEngageSell />
-      <OurServices />
-      <IndustriesWeServe />
-      <CaseStudyCard />
-      <WorldMapSection />
+      <div className="w-full">
+        <SocialMediaHero />
+
+        <section className="relative w-full">
+          <div className="relative z-10">
+            <ClientsSection />
+          </div>
+        </section>
+
+        <section className="relative w-full">
+          <div className="relative z-10">
+            <SocialMedia />
+          </div>
+        </section>
+        <section className="relative w-full">
+          <div className="relative z-10">
+            <Technologies />
+          </div>
+        </section>
+        <section className="relative w-full">
+          <div className="relative z-10">
+            <PartnershipSection />
+          </div>
+        </section>
+
+        <section className="relative w-full ">
+          <div className="relative z-10">
+            <ReachEngageSell />
+          </div>
+        </section>
+
+        <section className="relative w-full ">
+          <div className="relative z-10">
+            <OurServices />
+          </div>
+        </section>
+
+        <section className="relative w-full ">
+          <div className="relative z-10">
+            <IndustriesWeServe />
+          </div>
+        </section>
+
+        <section className="relative w-full ">
+          <div className="relative z-10">
+            <CaseStudyCard />
+          </div>
+        </section>
+
+        <section className="relative w-full">
+          <div className="relative z-10">
+            <WorldMapSection />
+          </div>
+        </section>
+
+        <section className="relative w-full">
+          <TopEllipse color="#D8FF36" height={200} />
+          <div className="relative z-10">
+            <Footer />
+          </div>
+        </section>
+      </div>
     </div>
   );
 }

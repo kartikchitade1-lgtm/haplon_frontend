@@ -1,3 +1,5 @@
+"use client";
+
 // components/IndustriesWeServe.tsx
 export default function IndustriesWeServe() {
   const industryImages = [
@@ -8,7 +10,10 @@ export default function IndustriesWeServe() {
   ];
 
   const half = Math.ceil(industryImages.length / 2);
-  const col1 = [...industryImages.slice(0, half), ...industryImages.slice(0, half)];
+  const col1 = [
+    ...industryImages.slice(0, half),
+    ...industryImages.slice(0, half),
+  ];
   const col2 = [...industryImages.slice(half), ...industryImages.slice(half)];
 
   return (

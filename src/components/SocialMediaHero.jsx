@@ -17,7 +17,7 @@ export default function SocialMediaHero() {
         />
 
         {/* VR Glass Bottom Border Animation */}
-        <div
+        {/* <div
           className="absolute w-[100px] sm:w-[140px] md:w-[180px] h-[3px] bg-lime-400 animate-blink"
           style={{
             bottom: "41%",
@@ -26,7 +26,7 @@ export default function SocialMediaHero() {
             borderRadius: "99px",
             boxShadow: "0 0 10px #a6ff00, 0 0 20px #a6ff00, 0 0 40px #a6ff00",
           }}
-        />
+        /> */}
       </div>
 
       {/* Text Content */}

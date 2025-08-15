@@ -1,6 +1,10 @@
 "use client";
 
-import Slider from "react-slick";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Autoplay } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
+import TopEllipse from "./TopEllipse";
 
 export default function OurServices() {
   const services = [
@@ -26,34 +30,13 @@ export default function OurServices() {
     },
   ];
 
-  const settings = {
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    arrows: true,
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 2,
-        },
-      },
-      {
-        breakpoint: 640,
-        settings: {
-          slidesToShow: 1,
-        },
-      },
-    ],
-  };
-
   return (
     <section className="bg-gradient-to-b from-black to-gray-100 text-white py-16 px-4">
+      <TopEllipse color="#000000" height={200} />
+
       <div className="max-w-7xl mx-auto text-center">
         {/* Tag */}
-        <span className="inline-block px-6 py-1 border border-dashed border-[#D8FF36] border-dotted text-[#D8FF36] text-sm rounded-full mb-6">
+        <span className="inline-block px-6 py-1 border border-dashed border-[#D8FF36] text-[#D8FF36] text-sm rounded-full mb-6">
           Other services
         </span>
 
@@ -67,11 +50,22 @@ export default function OurServices() {
           for our clients.
         </p>
 
-        {/* Services Carousel */}
-        <Slider {...settings}>
+        {/* Services Swiper */}
+        <Swiper
+          modules={[Pagination, Autoplay]}
+          pagination={{ clickable: true }}
+          autoplay={{ delay: 3000, disableOnInteraction: false }}
+          spaceBetween={20}
+          breakpoints={{
+            0: { slidesPerView: 1 },
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 4 },
+          }}
+          className="pb-12"
+        >
           {services.map((service, idx) => (
-            <div key={idx} className="px-2">
-              <div className="bg-white text-black rounded-2xl shadow p-6 flex flex-col items-start text-left mx-2">
+            <SwiperSlide key={idx}>
+              <div className="bg-white text-black rounded-2xl shadow p-6 flex flex-col items-start text-left mx-2 h-full">
                 {/* Icon Placeholder */}
                 <div className="mb-4">
                   <div className="w-10 h-10 bg-gray-200 rounded flex items-center justify-center">
@@ -81,9 +75,9 @@ export default function OurServices() {
                 <h3 className="font-bold text-lg mb-2">{service.title}</h3>
                 <p className="text-sm text-gray-700">{service.description}</p>
               </div>
-            </div>
+            </SwiperSlide>
           ))}
-        </Slider>
+        </Swiper>
 
         {/* Buttons */}
         <div className="mt-8 flex flex-wrap justify-center gap-4">

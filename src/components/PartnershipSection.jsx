@@ -1,10 +1,14 @@
 // components/PartnershipSection.tsx
+"use client"
 import Image from "next/image";
+import TopEllipse from "./TopEllipse";
 
 export default function PartnershipSection() {
   return (
-    <section className="bg-[#D8FF36] py-12 px-4 md:px-8 lg:px-16">
-      <div className="max-w-7xl mx-auto">
+    <section className="relative bg-[#D8FF36] py-12 px-4 md:px-8 lg:px-16 pb-100px lg:pb-[200px]">
+      <TopEllipse color="#D8FF36" height={200} />
+
+      <div className="relative max-w-7xl mx-auto">
         {/* Tag */}
         <div className="flex justify-center mb-6">
           <span className="bg-white text-gray-700 px-8 py-4 rounded-full text-sm font-medium shadow">
@@ -28,7 +32,6 @@ export default function PartnershipSection() {
         </p>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-0 md:gap-10 items-stretch min-h-screen">
-          {/* Left Image */}
           {/* Left Image */}
           <div className="flex items-center justify-center h-full">
             <div
