@@ -9,7 +9,7 @@ import TopEllipse from "./TopEllipse";
 
 export default function SocialMedia() {
   return (
-    <section className="w-full pb-[100px] lg:pb-[150px]">
+    <section className="w-full pb-[100px] lg:pb-[200px]">
       <TopEllipse color="#000000" height={200} />
 
       <div className="relative z-10">
