@@ -5,7 +5,7 @@ import TopEllipse from "./TopEllipse";
 const WorldMapSection = () => {
   return (
     <>
-      <section className="">
+      <section className="bg-black">
         <TopEllipse color="#000000" height={200} />
         {/* Black Section */}
         <div className="bg-black relative text-center px-4 py-16 md:py-24 z-10">
