@@ -10,6 +10,8 @@ import TopEllipse from "./TopEllipse";
 export default function SocialMedia() {
   return (
     <section className="w-full pb-[100px] lg:pb-[150px]">
+      <TopEllipse color="#000000" height={200} />
+
       <div className="relative z-10">
         {/* Tag */}
         <div className="relative flex justify-center mb-6">
@@ -86,7 +88,6 @@ export default function SocialMedia() {
           </button>
         </div>
       </div>
-      <TopEllipse color="#000000" height={200} />
     </section>
   );
 }

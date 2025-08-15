@@ -167,7 +167,6 @@ export default function Home() {
         </section>
 
         <section className="relative w-full">
-          <TopEllipse color="#D8FF36" height={200} />
           <div className="relative z-10">
             <Footer />
           </div>

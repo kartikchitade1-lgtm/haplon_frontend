@@ -1,12 +1,14 @@
 "use client";
 import React from "react";
+import TopEllipse from "./TopEllipse";
 
 export default function Footer() {
   return (
     <div>
       <section className="relative">
-        <div className="relative bg-[#D8FF36] text-black">
+      <TopEllipse color="#D8FF36" height={200} />
 
+        <div className="relative bg-[#D8FF36] text-black">
 
           <div className="relative z-10 mt-[120px] px-4 py-8 text-center">
             <h2 className="font-semibold text-3xl">Hoplon & Co.</h2>
